@@ -1,8 +1,8 @@
 # LXX-Wedding-MV
 
-**把婚礼预告剪成能继续修改的 Final Cut 原素材工程。**
+**婚礼全程、预告与MV：可复用的剪辑规则与 Final Cut 原素材工程 skill。**
 
-这是从真实婚礼剪辑协作中整理的 Agent Skill，适合婚礼预告、MV、微电影的制作和重剪。它包含工作流程、选镜原则、原素材工程注意事项和一个只读 FCPXML 核验工具。实际选镜仍需观看画面、听音乐；不是一键自动成片软件，也不包含 Final Cut 控制连接器。
+这是从真实婚礼剪辑协作中整理的 Agent Skill，适合婚礼预告、MV、微电影的制作和重剪，并补充独立的婚礼全程规则。它包含工作流程、选镜原则、原素材工程注意事项和一个只读 FCPXML 核验工具。实际选镜仍需观看画面、听音乐；不是一键自动成片软件，也不包含 Final Cut 控制连接器。
 
 ## 核心原则
 
@@ -12,7 +12,17 @@
 - **原片可编辑：**直接引用源文件，保留原声组件，变速、字幕和音量在工程中可调整。
 - **导入后验收：**核对帧率、时长、空隙、缺失媒体、选材越界和实际导出。
 
-只针对短片；婚礼全程需要另一套完整覆盖与过程保留规范。没有固定33秒 / 40秒、固定歌曲、固定蓝金或黑金色调。
+全程按时间顺序覆盖有效内容，短片按叙事精选；两套规则分开执行。没有固定33秒 / 40秒、固定歌曲、固定蓝金或黑金色调。
+
+## 当前规则（2026-10-29）
+
+- [稳定核心与重复取舍](skills/wedding-mv-finalcut/references/shot-selection.md)：掐头尾、往返运镜只取稳定一段、近似空镜优先后拍有效段、保留暗场与不同人物组合。
+- [婚礼全程与事件防漏](skills/wedding-mv-finalcut/references/full-wedding.md)：逐条覆盖、场景开头先空镜、重要过程与原声、全场宾客大合影、事件范围与未用素材对账。
+- [誓言旁白与语义匹配](skills/wedding-mv-finalcut/references/vows-and-semantic-editing.md)：完整句、说话人确认、实际采用区间匹配、独立人声和配乐避让。
+- [预告／MV结构与风格](skills/wedding-mv-finalcut/references/story-and-style.md)：预告通常30～60秒、MV通常3～6分钟；按当次音乐、结构、节奏和侧重调整。
+- [FCPXML检查](skills/wedding-mv-finalcut/references/fcpxml-native-editing.md)：授权范围、帧率、变速、连接音轨锚点、时间分母与真实导入检查。
+
+这是规则与 Agent Skill 仓库，**不包含桌面软件源码、应用安装包、模型权重或客户素材**。规则要求不等于自动能力已全部实现；声纹、识别、审美及原生导入需要实际验证。初稿可以保留待复核标记交付，不替用户勾选已核对。
 
 ## 安装
 
@@ -63,6 +73,9 @@ python3 -m unittest discover -s tests -v
 skills/wedding-mv-finalcut/
 ├── SKILL.md
 ├── agents/openai.yaml
+├── references/full-wedding.md
+├── references/shot-selection.md
+├── references/vows-and-semantic-editing.md
 ├── references/story-and-style.md
 ├── references/fcpxml-native-editing.md
 └── scripts/audit_fcpxml.py

@@ -1,4 +1,4 @@
 interface:
-  display_name: "婚礼预告 · Final Cut 原素材剪辑"
-  short_description: "按参考音乐剪婚礼预告，保护用户选材并交付可继续调整的原素材工程"
-  default_prompt: "使用 $wedding-mv-finalcut，按我的参考音乐和指定选材剪婚礼预告，先备份时间线，再交付可编辑的原素材工程。"
+  display_name: "婚礼剪辑 · Final Cut 原素材工程"
+  short_description: "区分全程覆盖与预告MV精选，保留原片、完整原声和可继续精修的工程"
+  default_prompt: "使用 $wedding-mv-finalcut，按本次全程或预告MV要求剪辑，先备份，再按授权范围与指定音乐交付可编辑的原素材工程。"
